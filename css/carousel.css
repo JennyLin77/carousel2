@@ -1,0 +1,99 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+    font: normal 100% Microsoft YaHei,SimHei,SimSun,Helvetica, Arial, sans-serif;
+    color: #000;
+    width: 100%;
+    background-color: #fff;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+
+div.carousel {
+    position: relative;
+    width: 520px;                   /* 设置容器宽度 */
+    height: 260px;                  /* 设置容器高度 */
+    margin: 50px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box; 
+    -webkit-box-sizing: content-box;
+}
+/* 前后按钮区 */
+div.carousel:hover a.carousel-prev,div.carousel:hover a.carousel-next{
+    display: block;
+}
+a.carousel-prev{
+    display: none;
+    background: rgba(0,0,0,0.25) url(../images/angle-left.png) no-repeat center center;
+    position: absolute;
+    top: 111px;                     /* 设置按钮位置：容器高度/2-按钮高度/2 */
+    left: 0;
+    width: 25px;
+    height: 38px;
+    background-size: 36%;
+    z-index: 10;
+}
+a.carousel-next{
+    display: none;
+    background: rgba(0,0,0,0.25) url(../images/angle-right.png) no-repeat center center;
+    position: absolute;
+    top: 111px;                     /* 设置按钮位置：容器高度/2-按钮高度/2 */
+    right: 0;
+    width: 25px;
+    height: 38px;
+    background-size: 36%;
+    z-index: 10;
+}
+/* 图片区 */
+div.carousel-picList ul{
+    display: inline;
+    position: absolute;
+    width: 2080px;                  /* 设置ul宽度：容器宽度*图片张数 */
+    left: 0px;
+    top: 0px;
+}
+li.carousel-picItem {
+    display: block;
+    float: left;
+    width: 520px;                   /* 设置图片宽度：容器宽度 */
+    height: 260px;                  /* 设置图片高度：容器高度 */
+}
+li.carousel-picItem>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+li.carousel-picItem img {
+    width: 100%;
+    height: 100%;
+}
+/* 选择按钮区 */
+ul.carousel-selList {
+    width: 20%;
+    height: 15px;
+    margin-left: 40%;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+}
+li.carousel-selItem {
+    text-indent: -9999px;
+    width: 10.5px;
+    height: 10.5px;
+    background-color: rgba(179,179,179,0.8);
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+ul.carousel-selList li.current {
+    background-color: #76BCFB;
+}
